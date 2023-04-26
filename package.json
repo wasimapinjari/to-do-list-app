@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "start": "node app.js",
-    "build": "yarn"
+    "build": "npm install"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
