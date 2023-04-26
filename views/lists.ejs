@@ -1,0 +1,50 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1>
+      <%= day %>
+    </h1>
+  </div>
+
+  <div class="box">
+
+    <form action="/" method="get">
+      <div class="item">
+        <input style="visibility: hidden;" type="checkbox">
+        <div class="flex-space-apart wrap">
+          <p class="wrap">
+            Today
+          </p>
+          <button type="submit" class="button-round--2" name="submit" value="Today">Open</button>
+        </div>
+      </div>
+    </form>
+
+    <% lists.forEach(function(listItem) { %>
+      <form action="/deleteList" method="post">
+        <div class="item">
+          <input type="checkbox" onchange="this.form.submit()" name="checked" value="<%= listItem._id %>">
+          <div class="flex-space-apart">
+            <p>
+              <%= listItem.name %>
+            </p>
+      </form>
+      <form action="/redirect" method="post">
+        <button type="submit" class="button-round--3" name="listName" value="<%= listItem.name %>">Open</button>
+  </div>
+  </div>
+  </form>
+
+  <% }); %>
+
+    <form class="item" action="/newList" method="post">
+      <input type="text" name="newlistText" placeholder="New List" autocomplete="off">
+      <button type="submit" class="button-round" name="listName" value="<%= day %>"><svg
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          style="height: 1.5rem;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg></button>
+    </form>
+    </div>
+
+    <%- include("footer") -%>

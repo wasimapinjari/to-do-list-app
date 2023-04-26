@@ -1,0 +1,63 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1>
+      <%= day %>
+    </h1>
+  </div>
+
+  <div class="box">
+    <% lists.forEach(function(listItem) { %>
+      <form action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" onchange="this.form.submit()" name="checked" value="<%= listItem._id %>">
+          <input type="hidden" name="listName" value="<%= day %>">
+          <p>
+            <%= listItem.name %>
+          </p>
+        </div>
+      </form>
+      <% }); %>
+
+        <form class="item" action="/" method="post">
+          <input type="text" name="listText" placeholder="New Item" autocomplete="off">
+          <button type="submit" class="button-round" name="listName" value="<%= day %>"><svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" style="height: 1.5rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg></button>
+        </form>
+  </div>
+
+
+  <div class="box">
+    <div class="form-div">
+      <form class="item" action="/newList" method="post">
+        <input type="text" class="width-modifier" name="newlistText" placeholder="New List Name" autocomplete="off">
+    </div>
+
+    <div class="box--2" id="heading">
+      &nbsp;
+      <button type="submit" class="button-click button-click--left" name="listName" value="<%= day %>">New List&nbsp;
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          style="height: 1.3rem;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+      </button>
+      </form>
+
+      <form action="/lists" method="post">
+        <button type="submit" class="button-click button-click--right"><span>All
+            Lists&nbsp;</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" style="height: 1.3rem;">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  </div>
+
+  <%- include("footer") -%>
