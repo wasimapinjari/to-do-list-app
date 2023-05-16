@@ -1,6 +1,6 @@
 html {
   background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #E4E9FD 90%, #A683E3 90%);
+  background-image: -webkit-linear-gradient(135deg, #81AED9 -100%, #E4E9FD 100%);
   min-height: 1000px;
   font-family: 'helvetica neue';
 }
@@ -29,7 +29,7 @@ h1 {
 }
 
 #heading {
-  background-color: #A683E3;
+  background-color: #81AED9;
   text-align: center;
 }
 
@@ -50,7 +50,7 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #A683E3;
+  text-decoration-color: #81AED9;
 }
 
 input[type="checkbox"] {
@@ -71,7 +71,7 @@ p {
   width: 50%;
   top: 0;
   font-size: 1.2rem;
-  background-color: #A683E3;
+  background-color: #81AED9;
   border-radius: 5px;
   border: none;
   color: #F1F1F1;
@@ -82,7 +82,7 @@ p {
 }
 
 .button-click:hover {
-  background-color: #8569b6;
+  background-color: #598bbb;
 }
 
 .flex-space-apart {
@@ -127,7 +127,7 @@ form.item {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #81AED9;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
@@ -136,7 +136,7 @@ form.item {
 }
 
 .button-round:hover {
-  background-color: #8569b6;
+  background-color: #598bbb;
 }
 
 
@@ -145,7 +145,7 @@ form.item {
   /* width: 50px; */
   border-radius: 5px;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #81AED9;
   color: #fff;
   font-size: 1.2rem;
   padding-bottom: 6px;
@@ -157,7 +157,7 @@ form.item {
 }
 
 .button-round--2:hover {
-  background-color: #8569b6;
+  background-color: #598bbb;
 }
 
 
@@ -166,7 +166,7 @@ form.item {
   /* width: 50px; */
   border-radius: 5px;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #81AED9;
   color: #fff;
   font-size: 1.2rem;
   padding-bottom: 6px;
@@ -179,7 +179,7 @@ form.item {
 }
 
 .button-round--3:hover {
-  background-color: #8569b6;
+  background-color: #598bbb;
 }
 
 
@@ -201,7 +201,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #A683E3;
+  box-shadow: inset 0 -3px 0 0 #81AED9;
 }
 
 ::placeholder {
