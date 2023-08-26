@@ -1,3 +1,28 @@
+::-moz-selection {
+  color: #81AED9;
+  background: #E4E9FD;
+}
+
+::selection {
+  color: #81AED9;
+  background: #E4E9FD;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #E4E9FD;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  border-radius: 10px;
+  height: 30px;
+  background-color: #81AED9;
+}
+
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(135deg, #81AED9 -100%, #E4E9FD 100%);
